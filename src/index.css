@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Dreamy & Whimsical Aesthetic */
+/* Portfolio Design System - Refined for Accessibility & Vibrancy */
 
 @layer base {
   :root {
-    /* Brand Colors - Soft Pastels */
-    --cream: 45 30% 97%;           /* #FFFBEB - Warm cream background */
-    --lavender: 267 100% 87%;      /* #DABFFF - Soft lavender accent */  
-    --peach: 32 100% 83%;          /* #FFD6A5 - Light peach accent */
-    --charcoal: 0 0% 25%;          /* #404040 - Dark muted text */
+    /* Brand Colors - Adjusted for better contrast and visibility */
+    --cream: 45 30% 97%;      /* #FAF8F6 - Kept the warm cream background */
+    --lavender: 267 85% 78%;  /* ADJUSTED: Darker, richer lavender. Hex: #B8A2FF */
+    --peach: 32 100% 75%;     /* ADJUSTED: Darker, more vibrant peach. Hex: #FFC280 */
+    --charcoal: 0 0% 15%;      /* ADJUSTED: Deeper charcoal for crisp text. Hex: #262626 */
     
-    /* Semantic Design Tokens */
+    /* Semantic Design Tokens (linking to the new colors) */
     --background: var(--cream);
     --foreground: var(--charcoal);
     
-    --card: 0 0% 100%;             /* Pure white for cards */
+    --card: 0 0% 100%;
     --card-foreground: var(--charcoal);
     
     --popover: 0 0% 100%;
@@ -31,7 +31,7 @@
     --accent: var(--lavender);
     --accent-foreground: var(--charcoal);
     
-    --muted: 45 20% 95%;           /* Subtle muted tones */
+    --muted: 45 20% 95%;
     --muted-foreground: 0 0% 45%;
     
     --destructive: 0 84% 60%;
@@ -41,7 +41,7 @@
     --input: 45 20% 90%;
     --ring: var(--lavender);
     
-    --radius: 1rem;                /* Softer, more rounded corners */
+    --radius: 1rem;
     
     /* Portfolio-specific Design Tokens */
     --hero-gradient: linear-gradient(135deg, hsl(var(--cream)), hsl(var(--peach) / 0.3));
@@ -56,6 +56,7 @@
   }
   
   .dark {
+    /* Dark mode remains largely the same, as contrast is already good */
     --background: 0 0% 8%;
     --foreground: 45 30% 95%;
     --card: 0 0% 12%;
@@ -84,10 +85,13 @@
   }
   
   body {
-    @apply bg-background text-foreground font-nunito;
+    @apply bg-background text-foreground;
+    /* Removed font-nunito here as it's better handled in tailwind.config.js */
     background: hsl(var(--background));
   }
 }
+
+
 
 @layer components {
   /* Hero Button Styles */

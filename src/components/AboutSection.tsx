@@ -59,20 +59,20 @@ const AboutSection = () => {
                 </p>
                 <p>
                   With a keen eye for design and a love for clean code, I specialize in creating 
-                  modern web applications that not only look stunning but also provide seamless user experiences. 
+                  modern applications that not only look stunning but also provide seamless user experiences. 
                   I believe in the power of technology to create meaningful connections and solve real-world problems.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                  When I'm not coding, you'll find me exploring new technologies, building new  
                   projects, or enjoying the great outdoors. I'm always excited about the next creative challenge!
                 </p>
               </div>
 
               {/* Skills/Technologies */}
               <div className="pt-6">
-                <h3 className="text-xl font-semibold text-charcoal mb-4">What I Love Working With</h3>
+                <h3 className="text-xl font-semibold text-charcoal mb-4">What I Love</h3>
                 <div className="flex flex-wrap gap-3">
-                  {['React', 'TypeScript', 'Three.js', 'Tailwind CSS', 'Node.js', 'Next.js'].map((skill) => (
+                  {['Learning','Improving'].map((skill) => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-primary/10 text-charcoal rounded-full text-sm font-medium 

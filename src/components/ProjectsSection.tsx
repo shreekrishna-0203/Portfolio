@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
@@ -10,30 +9,28 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Interactive 3D Portfolio",
-      description: "A dreamy portfolio website featuring interactive Three.js animations, smooth scrolling, and a whimsical design aesthetic.",
+      title: "Custy - Online Meeting Platform",
+      description: "An innovative platform that transforms online meetings with AI-driven insights, real-time collaboration tools, and a user-friendly interface.",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      technologies: ["React", "Three.js", "TypeScript", "Tailwind CSS"],
-      liveUrl: "#",
-      codeUrl: "https://github.com/shreekrishna-0203"
+      technologies: ["React", "Supabase", "TypeScript", "Tailwind CSS"],
+      codeUrl: "https://github.com/shreekrishna-0203/custy"
     },
     {
       id: 2,
-      title: "Modern E-Commerce Platform",
-      description: "A full-stack e-commerce solution with real-time inventory management, secure payments, and responsive design.",
+      title: "Optimus - The Gym Management App",
+      description: "A comprehensive gym management app that helps users track workouts, nutrition, and progress with a sleek interface and powerful analytics.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      technologies: ["Next.js", "Stripe", "MongoDB", "Node.js"],
-      liveUrl: "#",
-      codeUrl: "https://github.com/shreekrishna-0203"
+      technologies: ["Android", "Kotlin", "Firebase", "Jetpack Compose"],
+      codeUrl: "https://github.com/shreekrishna-0203/Optimus"
     },
     {
       id: 3,
-      title: "Creative Design System",
-      description: "A comprehensive design system with reusable components, animation libraries, and design tokens for consistent branding.",
+      title: "HandCricket - A Nostalgic Game",
+      description: "A fun and engaging hand cricket game that brings back childhood memories with its simple yet addictive gameplay.",
       image: "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      technologies: ["Figma", "Storybook", "React", "SCSS"],
-      liveUrl: "#",
-      codeUrl: "https://github.com/shreekrishna-0203"
+      technologies: ["Python", "MediaPipe", "OpenCV", "Scikit-learn", "Matplotlib"],
+      liveUrl: "https://www.linkedin.com/posts/shree-krishna-hebbar-k-s-311301232_computervision-python-opencv-activity-7363168521796665345-ZvHZ?utm_source=share&utm_medium=member_desktop",
+      // No codeUrl for this one
     }
   ];
 
@@ -100,22 +97,31 @@ const ProjectsSection = () => {
 
                   {/* Project Links */}
                   <div className="flex gap-4 pt-4">
-                    <a
-                      href={project.liveUrl}
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-charcoal 
-                               rounded-full font-medium hover:bg-primary/80 transition-colors duration-200"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.codeUrl}
-                      className="inline-flex items-center gap-2 px-4 py-2 border-2 border-primary text-primary 
-                               rounded-full font-medium hover:bg-primary hover:text-charcoal transition-all duration-200"
-                    >
-                      <Github size={16} />
-                      View Code
-                    </a>
+                    {/* --- FIX: Conditionally render Live Demo button --- */}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-charcoal rounded-full font-medium hover:bg-primary/80 transition-colors duration-200"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    )}
+                    
+                    {/* --- FIX: Conditionally render View Code button --- */}
+                    {project.codeUrl && (
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-charcoal transition-all duration-200"
+                      >
+                        <Github size={16} />
+                        View Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>

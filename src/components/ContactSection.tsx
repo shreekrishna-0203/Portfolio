@@ -22,7 +22,7 @@ const ContactSection = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:shreekrishnahebbar@gmail.com',
+      url: 'mailto:skhebbarkd@gmail.com',
       icon: Mail,
       color: 'hover:text-primary'
     }
@@ -57,10 +57,10 @@ const ContactSection = () => {
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-primary/10 rounded-full border border-primary/20">
               <Mail className="w-5 h-5 text-primary" />
               <a
-                href="mailto:shreekrishnahebbar@gmail.com"
+                href="mailto:skhebbarkd@gmail.com"
                 className="text-lg font-medium text-charcoal hover:text-primary transition-colors duration-200"
               >
-                shreekrishnahebbar@gmail.com
+                skhebbarkd@gmail.com
               </a>
             </div>
           </motion.div>
@@ -108,7 +108,7 @@ const ContactSection = () => {
                 Let's bring your ideas to life with beautiful, functional designs and seamless user experiences.
               </p>
               <a
-                href="mailto:shreekrishnahebbar@gmail.com"
+                href="mailto:skhebbarkd@gmail.com"
                 className="hero-button inline-flex items-center gap-2"
               >
                 <Heart size={20} />
@@ -126,13 +126,13 @@ const ContactSection = () => {
         transition={{ duration: 0.8, delay: 1 }}
         className="text-center mt-24 pt-12 border-t border-primary/10"
       >
-        <p className="text-charcoal/50 text-sm">
+        {/* <p className="text-charcoal/50 text-sm">
           Built with{' '}
           <Heart size={16} className="inline mx-1 text-primary animate-gentle-pulse" />{' '}
           using React, Three.js, and Tailwind CSS
-        </p>
+        </p> */}
         <p className="text-charcoal/40 text-xs mt-2">
-          © {new Date().getFullYear()} Shree Krishna Hebbar. All rights reserved.
+          © {new Date().getFullYear()} Shree Krishna Hebbar K S. All rights reserved.
         </p>
       </motion.div>
     </section>
